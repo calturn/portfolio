@@ -10,9 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet"> 
 </head>
-<body>
+<body id="page">
 
-    <nav>
+    <nav id="nav">
         <div class="nav-l">
             <button class="mode-switch">Mode</button>
         </div>
@@ -35,13 +35,13 @@
             <p class="landing-p">Kia ora! I'm a</p>
             <h1 class="landing-heading">Front-end Developer & Web Designer</h1>
             <div class="line-divider"></div>
-            <p class="location-text"><i>i</i> Based in Wellington, New Zealand</p>
-            <a href="#projects" class="section-btn">Projects</a>
+            <p class="location-text"><img class="location-pin" src="./img/location_pin.svg"> Based in Wellington, New Zealand</p>
+            <a href="#projects" class="section-btn">View projects</a>
         </div>
         <div class="landing-r">
             <!-- <div class="triangle tri-r"></div> -->
         </div>
-        <div class="page-indicator">
+        <div class="page-indicators">
             <div id="pg1" class="indicator"></div>
             <div id="pg2" class="indicator"></div>
             <div id="pg3" class="indicator"></div>
@@ -51,33 +51,62 @@
     <div class="section-divider"></div>
 
     <div id="projects" class="projects">
+
         <div class="projects-l">
             <h1 class="section-title">Projects</h1>
-            <div class="monitor-preview"></div>
-        </div>
-        <div class="projects-r">
-            <p>I recently graduated with diploma in web and UX design – the following are a few selected projects from my studies.</p>
+            <p class="projects-text">I recently graduated with diploma in web and UX design – the following are a few selected projects from my studies.</p>
             <div class="projects-list">
-                <div class="project-item">
+                <div id="preloved" class="project-item">
                     <p class="project-number">01.</p>
                     <a href="" class="project-title">preloved</a>
                     <p class="project-type">Web App</p>
                 </div>
-                <div class="project-item">
+                <div id="meanwhile" class="project-item">
                     <p class="project-number">02.</p>
                     <a href="" class="project-title">MEANWHILE Gallery</a>
                     <p class="project-type">Wordpress Theme</p>
                 </div>
-                <div class="project-item">
+                <div id="kiwistay" class="project-item">
                     <p class="project-number">03.</p>
                     <a href="" class="project-title">KiwiStay</a>
                     <p class="project-type">Web App</p>
                 </div>
             </div>
         </div>
+
+        <div class="projects-r">            
+            <div class="monitor-container">
+                <div class="monitor-preview">
+                    <div id="idleImg" class="idle-img"></div>
+                    <img src="./img/preloved.png" alt="preloved mockup" class="monitor-image" id="prelovedImg">
+                    <img src="./img/meanwhile.png" alt="MEANWHILE mockup" class="monitor-image" id="meanwhileImg">
+                    <img src="./img/Kiwistay.jpg" alt="KiwiStay Mmckup" class="monitor-image" id="kiwistayImg">
+                </div>
+                <div class="monitor-stand-container">
+                    <div class="monitor-neck"></div>
+                    <div class="monitor-stand"></div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <div class="section-divider"></div>
+
+    <div class="contact" id="contact">
+        <div class="contact-l">
+            <h1 class="section-title no-border">Let's get in touch!</h1>
+        </div>
+        <div class="contact-r">
+            <a id="emailBtn" class="contact-option">Email</a>
+            <a id="linkedInBtn" class="contact-option">LinkedIn</a>
+            <a id="gitHubBtn" class="contact-option">GitHub</a>
+        </div>
+    </div>
+
+    <div class="page-bottom">
+        <a href="#page" class="back-to-top">Back to top</a>
+    </div>
 
     <script src="./js/index.js"></script>
     

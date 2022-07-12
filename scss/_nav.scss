@@ -1,3 +1,7 @@
+nav {
+    width: 100%;
+}
+
 .nav-l, .nav-r {
     display: flex;
     align-items: center;
@@ -41,6 +45,6 @@
 .menu-line {
     background: $accent-two;
     width: 30px;
-    height: 2.5px;
+    height: 2px;
     margin: 2px 0 2px 0;
 }

@@ -12,10 +12,10 @@ body {
   background: #000425;
   color: #AFB7FF;
   padding: 1rem;
-  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
 nav {
@@ -29,7 +29,7 @@ nav {
 p {
   font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
-  padding-bottom: 5.5rem;
+  padding-bottom: 2rem;
 }
 
 a {
@@ -60,6 +60,27 @@ button {
     transform: translateY(0%);
   }
 }
+@keyframes idle {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+nav {
+  width: 100%;
+}
+
 .nav-l, .nav-r {
   display: flex;
   align-items: center;
@@ -105,7 +126,7 @@ button {
 .menu-line {
   background: #FFC690;
   width: 30px;
-  height: 2.5px;
+  height: 2px;
   margin: 2px 0 2px 0;
 }
 
@@ -132,6 +153,16 @@ button {
   align-items: center;
   flex-direction: column;
   transform: translateY(4rem);
+}
+
+.line-divider {
+  margin-top: 2rem;
+  background: url(../img/sssquiggly.svg);
+  background-position: center;
+  background-size: 250%;
+  height: 2rem;
+  width: 15rem;
+  animation: squiggle 5s infinite;
 }
 
 .tri-l, .tri-r {
@@ -168,12 +199,19 @@ button {
   padding-bottom: 1rem;
 }
 
-.location-text {
-  padding: 2rem 0 6rem 0;
-  font-size: 0.875rem;
+.location-pin {
+  color: inherit;
+  height: 1.5em;
+  width: 2em;
+  vertical-align: middle;
 }
 
-.section-btn {
+.location-text {
+  padding: 2rem 0 6rem 0;
+  font-size: 1rem;
+}
+
+.section-btn, .contact-option {
   background: #FFC690;
   border-radius: 10rem 5rem 10rem 5rem;
   animation: float 5s infinite ease-in-out;
@@ -181,7 +219,7 @@ button {
   color: #000425;
   transition-duration: 0.25s;
 }
-.section-btn:hover {
+.section-btn:hover, .contact-option:hover {
   padding: 2rem;
   filter: brightness(110%);
   box-shadow: 0 0 1rem #FFC690;
@@ -190,21 +228,21 @@ button {
 }
 
 .section-divider {
-  margin: 4rem 0 0 0;
+  margin: 9rem 0 6rem 0;
   height: 2px;
   width: calc(100% - 8rem);
   background: #AFB7FF;
 }
 
-.page-indicator {
+.page-indicators {
   position: fixed;
   top: 48.5%;
-  right: 2rem;
+  right: 1rem;
   display: flex;
   flex-direction: column;
   transition-duration: 0.25s;
 }
-.page-indicator:hover {
+.page-indicators:hover {
   transform: scale(150%);
   transition-duration: 0.25s;
 }
@@ -224,12 +262,13 @@ button {
   cursor: pointer;
 }
 
-#pg1 {
+.active-pg {
   background: #FAF8EB;
 }
 
-.projects {
-  height: fit-content;
+.projects, .contact {
+  min-height: 100vh;
+  max-height: fit-content;
   width: 100%;
   padding: 4rem 4rem 0 4rem;
   display: flex;
@@ -247,23 +286,79 @@ button {
 }
 
 .projects-r {
-  padding-left: 2rem;
   padding-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .section-title {
   border-radius: 10rem 5rem 10rem 5rem;
   width: fit-content;
-  padding: 3rem;
-  border: 1px solid #AFB7FF;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
+  color: #FAF8EB;
+}
+
+.monitor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 7rem;
+}
+
+.monitor-stand-container {
+  height: 5rem;
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: brightness(80%);
 }
 
 .monitor-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 27.5rem;
+  height: 17.5rem;
+  border: solid #AFB7FF;
+  border-width: 0.5rem 0.5rem 2rem 0.5rem;
+}
+
+.monitor-image {
+  height: 100%;
   width: 100%;
-  height: 20rem;
-  border: 1.5rem solid #AFB7FF;
-  margin-bottom: 8rem;
+  object-fit: cover;
+  object-position: 0 0;
+  display: none;
+  overflow: hidden;
+}
+
+.idle-img {
+  background: url(../img/ccchaos.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.monitor-neck {
+  background: #AFB7FF;
+  width: 3rem;
+  height: 10rem;
+}
+
+.monitor-stand {
+  transform: translateY(-0.5rem);
+  background: #AFB7FF;
+  width: 100%;
+  height: 3rem;
+  border-radius: 100%;
+}
+
+.projects-text {
+  padding-bottom: 7rem;
 }
 
 .projects-list {
@@ -310,4 +405,80 @@ button {
   font-size: 1rem;
   padding: 0;
   text-align: right;
+}
+
+.show {
+  display: flex !important;
+}
+
+.hide {
+  display: none;
+}
+
+.contact {
+  min-height: fit-content;
+  justify-content: center;
+  z-index: 100;
+  padding-bottom: 8rem;
+}
+
+.contact-l {
+  display: flex;
+  width: fit-content;
+  padding-top: 1rem;
+}
+
+.contact-r {
+  display: flex;
+  width: fit-content;
+  padding: 0 0 0 4rem;
+}
+
+.contact-option {
+  height: fit-content;
+  padding: 2rem;
+  margin: 0.5rem;
+  animation: none;
+}
+.contact-option:hover {
+  transform: scale(110%) translateY(-0.25rem);
+}
+
+#linkedInBtn, #gitHubBtn {
+  background: #AFB7FF;
+}
+#linkedInBtn:hover, #gitHubBtn:hover {
+  box-shadow: 0 0 1rem #AFB7FF;
+}
+
+.no-border {
+  border: none;
+}
+
+.page-bottom {
+  padding-top: 0;
+  margin-bottom: -16rem;
+  transform: translateY(-15rem);
+  background: url(../img/sssurf.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: calc(100% + 2rem);
+  height: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-to-top {
+  transform: translateY(12rem);
+  color: #000425;
+  padding: 1rem;
+  font-size: 1.25rem;
+  border-bottom: 0 solid #FFC690;
+  transition-duration: 0.25s;
+}
+.back-to-top:hover {
+  border-bottom: 0.5rem solid #FFC690;
+  transform: translateY(12rem) scale(110%);
+  transition-duration: 0.25s;
 }

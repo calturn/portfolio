@@ -19,6 +19,16 @@
     transform: translateY(4rem);
 }
 
+.line-divider {
+    margin-top: 2rem;
+    background: url(../img/sssquiggly.svg);
+    background-position: center;
+    background-size: 250%;
+    height: 2rem;
+    width: 15rem;
+    animation: squiggle 5s infinite;
+}
+
 .tri-l, .tri-r  {
     width: 0; 
     height: 0;
@@ -49,9 +59,16 @@
     padding-bottom: 1rem;
 }
 
+.location-pin {
+    color: inherit;
+    height: 1.5em;
+    width: 2em;
+    vertical-align: middle;
+}
+
 .location-text {
     padding: 2rem 0 6rem 0;
-    font-size: 0.875rem;
+    font-size: 1rem;
 }
 
 .section-btn {
@@ -71,16 +88,16 @@
 }
 
 .section-divider {
-    margin: 4rem 0 0 0;
+    margin: 9rem 0 6rem 0;
     height: 2px;
     width: calc(100% - 8rem);
     background: $accent-one;
 }
 
-.page-indicator {
+.page-indicators {
     position: fixed;
     top: 48.5%;
-    right: 2rem;
+    right: 1rem;
     display: flex;
     flex-direction: column;
     transition-duration: 0.25s;
@@ -105,6 +122,6 @@
     }
 }
 
-#pg1 {
+.active-pg {
     background: $accent-three;
 }

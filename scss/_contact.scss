@@ -1,0 +1,66 @@
+.contact {
+    @extend .projects;
+    min-height: fit-content;
+    justify-content: center;
+    z-index: 100;
+    padding-bottom: 8rem;
+}
+
+.contact-l {
+    display: flex;
+    width: fit-content;
+    padding-top: 1rem;
+}
+.contact-r {
+    display: flex;
+    width: fit-content;
+    padding: 0 0 0 4rem;
+}
+
+.contact-option {
+    @extend .section-btn;
+    height: fit-content;
+    padding: 2rem;
+    margin: 0.5rem;
+    animation: none;
+    &:hover{
+        transform: scale(110%) translateY(-0.25rem);
+    }
+}
+
+#linkedInBtn, #gitHubBtn {
+    background: $accent-one;
+    &:hover{
+        box-shadow: 0 0 1rem $accent-one;
+    }
+}
+
+.no-border {
+    border: none;
+}
+
+.page-bottom {
+    padding-top: 0;
+    margin-bottom: -16rem;
+    transform: translateY(-15rem);
+    background: url(../img/sssurf.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: calc(100% + 2rem);
+    height: 50rem;
+    @include flex-center;
+}
+
+.back-to-top {
+    transform: translateY(12rem);
+    color: $bg-dark;
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-bottom: 0 solid $accent-two;
+    transition-duration: 0.25s;
+    &:hover {
+        border-bottom: 0.5rem solid $accent-two;
+        transform: translateY(12rem) scale(110%);
+        transition-duration: 0.25s;
+    }
+}
