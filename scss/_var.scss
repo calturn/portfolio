@@ -1,8 +1,16 @@
-// colours
+// Default colours
 $bg-dark: #000425;
 $accent-one: #AFB7FF;
 $accent-two: #FFC690;
 $accent-three: #FAF8EB;
+
+// Variable colours
+:root {
+    --bg: #000425;
+    --accent-one: #AFB7FF;
+    --accent-two: #FFC690;
+    --accent-three: #FAF8EB;
+}
 
 // fonts
 $font-display: 'Montserrat Alternates', sans-serif;

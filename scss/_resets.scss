@@ -9,8 +9,8 @@ html {
 }
 
 body {
-    background: $bg-dark;
-    color: $accent-one;
+    background: var(--bg);
+    color: var(--accent-one);
     padding: 1rem;
     display: flex;
     flex-direction: column;

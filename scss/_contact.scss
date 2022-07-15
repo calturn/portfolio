@@ -29,9 +29,9 @@
 }
 
 #linkedInBtn, #gitHubBtn {
-    background: $accent-one;
+    background: var(--accent-one);
     &:hover{
-        box-shadow: 0 0 1rem $accent-one;
+        box-shadow: 0 0 1rem var(--accent-one);
     }
 }
 
@@ -53,13 +53,13 @@
 
 .back-to-top {
     transform: translateY(12rem);
-    color: $bg-dark;
+    color: var(--bg);
     padding: 1rem;
-    font-size: 1.25rem;
-    border-bottom: 0 solid $accent-two;
+    font-size: 1.5rem;
+    border-bottom: 0 solid var(--accent-two);
     transition-duration: 0.25s;
     &:hover {
-        border-bottom: 0.5rem solid $accent-two;
+        border-bottom: 0.5rem solid var(--accent-two);
         transform: translateY(12rem) scale(110%);
         transition-duration: 0.25s;
     }

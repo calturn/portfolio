@@ -20,12 +20,15 @@ nav {
 .site-name {
     font-size: 1.25rem;
     text-transform: uppercase;
-    color: $accent-three;
+    color: var(--accent-three);
 }
 
 .mode-switch {
-    padding: 0.5rem;
-    background: $accent-two;
+    border-radius: 2rem;
+    padding: 1rem;
+    background: var(--accent-three);
+    color: var(--bg);
+    border: 0.2rem solid var(--bg);
     cursor: pointer;
 }
 
@@ -43,7 +46,7 @@ nav {
 }
 
 .menu-line {
-    background: $accent-two;
+    background: var(--accent-two);
     width: 30px;
     height: 2px;
     margin: 2px 0 2px 0;

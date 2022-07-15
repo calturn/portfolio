@@ -1,3 +1,10 @@
+:root {
+  --bg: #000425;
+  --accent-one: #AFB7FF;
+  --accent-two: #FFC690;
+  --accent-three: #FAF8EB;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +16,8 @@ html {
 }
 
 body {
-  background: #000425;
-  color: #AFB7FF;
+  background: var(--bg);
+  color: var(--accent-one);
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -101,12 +108,15 @@ nav {
 .site-name {
   font-size: 1.25rem;
   text-transform: uppercase;
-  color: #FAF8EB;
+  color: var(--accent-three);
 }
 
 .mode-switch {
-  padding: 0.5rem;
-  background: #FFC690;
+  border-radius: 2rem;
+  padding: 1rem;
+  background: var(--accent-three);
+  color: var(--bg);
+  border: 0.2rem solid var(--bg);
   cursor: pointer;
 }
 
@@ -124,7 +134,7 @@ nav {
 }
 
 .menu-line {
-  background: #FFC690;
+  background: var(--accent-two);
   width: 30px;
   height: 2px;
   margin: 2px 0 2px 0;
@@ -174,12 +184,12 @@ nav {
 
 .tri-l {
   transform: translateX(-1rem);
-  border-left: 150px solid #AFB7FF;
+  border-left: 150px solid var(--accent-one);
 }
 
 .tri-r {
   transform: translateX(1rem);
-  border-right: 150px solid #AFB7FF;
+  border-right: 150px solid var(--accent-one);
 }
 
 .landing-heading {
@@ -212,17 +222,17 @@ nav {
 }
 
 .section-btn, .contact-option {
-  background: #FFC690;
+  background: var(--accent-two);
   border-radius: 10rem 5rem 10rem 5rem;
   animation: float 5s infinite ease-in-out;
   padding: 1.5rem;
-  color: #000425;
+  color: var(--bg);
   transition-duration: 0.25s;
 }
 .section-btn:hover, .contact-option:hover {
   padding: 2rem;
   filter: brightness(110%);
-  box-shadow: 0 0 1rem #FFC690;
+  box-shadow: 0 0 1rem var(--accent-two);
   cursor: pointer;
   transition-duration: 0.25s;
 }
@@ -231,7 +241,7 @@ nav {
   margin: 9rem 0 6rem 0;
   height: 2px;
   width: calc(100% - 8rem);
-  background: #AFB7FF;
+  background: var(--accent-one);
 }
 
 .page-indicators {
@@ -241,29 +251,31 @@ nav {
   display: flex;
   flex-direction: column;
   transition-duration: 0.25s;
+  z-index: 1000;
 }
 .page-indicators:hover {
-  transform: scale(150%);
+  transform: scale(200%);
   transition-duration: 0.25s;
 }
 
 .indicator {
   height: 10px;
   width: 10px;
-  margin: 1px 0 1px 0;
+  margin: 2px 0 2px 0;
   border-radius: 100%;
   background: none;
-  border: 1px solid #FAF8EB;
+  border: 1px solid var(--accent-three);
   transition-duration: 0.25s;
 }
 .indicator:hover {
-  border-color: #FFC690;
+  border-color: var(--accent-two);
+  box-shadow: 0 0 0.5rem var(--accent-two);
   transition-duration: 0.25s;
   cursor: pointer;
 }
 
 .active-pg {
-  background: #FAF8EB;
+  background: var(--accent-three);
 }
 
 .projects, .contact {
@@ -296,7 +308,7 @@ nav {
   border-radius: 10rem 5rem 10rem 5rem;
   width: fit-content;
   margin-bottom: 3rem;
-  color: #FAF8EB;
+  color: var(--accent-three);
 }
 
 .monitor-container {
@@ -321,7 +333,7 @@ nav {
   align-items: center;
   width: 27.5rem;
   height: 17.5rem;
-  border: solid #AFB7FF;
+  border: solid var(--accent-one);
   border-width: 0.5rem 0.5rem 2rem 0.5rem;
 }
 
@@ -344,14 +356,14 @@ nav {
 }
 
 .monitor-neck {
-  background: #AFB7FF;
+  background: var(--accent-one);
   width: 3rem;
   height: 10rem;
 }
 
 .monitor-stand {
   transform: translateY(-0.5rem);
-  background: #AFB7FF;
+  background: var(--accent-one);
   width: 100%;
   height: 3rem;
   border-radius: 100%;
@@ -372,14 +384,14 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  color: #FAF8EB;
+  color: var(--accent-three);
   padding: 2rem 0 2rem 0;
-  border-bottom: 1px solid #AFB7FF;
+  border-bottom: 1px solid var(--accent-one);
   transition-duration: 0.25s;
 }
 .project-item:hover {
-  color: #FFC690;
-  border-bottom: 2px solid #FFC690;
+  color: var(--accent-two);
+  border-bottom: 2px solid var(--accent-two);
   transform: scale(105%);
   transition-duration: 0.25s;
 }
@@ -392,11 +404,11 @@ nav {
 
 .project-title {
   font-size: 1.25rem;
-  color: #FAF8EB;
+  color: var(--accent-three);
   width: 100%;
 }
 .project-title:hover {
-  color: #FFC690;
+  color: var(--accent-two);
   text-decoration: underline;
 }
 
@@ -445,10 +457,10 @@ nav {
 }
 
 #linkedInBtn, #gitHubBtn {
-  background: #AFB7FF;
+  background: var(--accent-one);
 }
 #linkedInBtn:hover, #gitHubBtn:hover {
-  box-shadow: 0 0 1rem #AFB7FF;
+  box-shadow: 0 0 1rem var(--accent-one);
 }
 
 .no-border {
@@ -471,14 +483,14 @@ nav {
 
 .back-to-top {
   transform: translateY(12rem);
-  color: #000425;
+  color: var(--bg);
   padding: 1rem;
-  font-size: 1.25rem;
-  border-bottom: 0 solid #FFC690;
+  font-size: 1.5rem;
+  border-bottom: 0 solid var(--accent-two);
   transition-duration: 0.25s;
 }
 .back-to-top:hover {
-  border-bottom: 0.5rem solid #FFC690;
+  border-bottom: 0.5rem solid var(--accent-two);
   transform: translateY(12rem) scale(110%);
   transition-duration: 0.25s;
 }

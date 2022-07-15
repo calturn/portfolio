@@ -14,7 +14,7 @@
 
     <nav id="nav">
         <div class="nav-l">
-            <button class="mode-switch">Mode</button>
+            <button id="modeSwitch" class="mode-switch mode-switch-dark">Lights on</button>
         </div>
         <div class="nav-c">
             <h1 class="site-name">Calum Turner</h1>
@@ -34,7 +34,7 @@
         <div class="landing-c">
             <p class="landing-p">Kia ora! I'm a</p>
             <h1 class="landing-heading">Front-end Developer & Web Designer</h1>
-            <div class="line-divider"></div>
+            <div id="squiggle" class="line-divider"></div>
             <p class="location-text"><img class="location-pin" src="./img/location_pin.svg"> Based in Wellington, New Zealand</p>
             <a href="#projects" class="section-btn">View projects</a>
         </div>
@@ -42,9 +42,9 @@
             <!-- <div class="triangle tri-r"></div> -->
         </div>
         <div class="page-indicators">
-            <div id="pg1" class="indicator"></div>
-            <div id="pg2" class="indicator"></div>
-            <div id="pg3" class="indicator"></div>
+            <a href="#page" id="pg1" class="indicator"></a>
+            <a href="#projects" id="pg2" class="indicator"></a>
+            <a href="#contact" id="pg3" class="indicator"></a>
         </div>
     </div>
 
@@ -104,8 +104,8 @@
         </div>
     </div>
 
-    <div class="page-bottom">
-        <a href="#page" class="back-to-top">Back to top</a>
+    <div id="waves" class="page-bottom">
+        <a id="topBtn" href="#page" class="back-to-top">Back to top</a>
     </div>
 
     <script src="./js/index.js"></script>

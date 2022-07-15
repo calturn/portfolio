@@ -28,9 +28,9 @@
     border-radius: 10rem 5rem 10rem 5rem;
     width: fit-content;
     // padding: 3rem;
-    // border: 1px solid $accent-one;
+    // border: 1px solid var(--accent-one);
     margin-bottom: 3rem;
-    color: $accent-three;
+    color: var(--accent-three);
 }
 
 .monitor-container {
@@ -53,7 +53,7 @@
     @include flex-center;
     width: 27.5rem;
     height: 17.5rem;
-    border: solid $accent-one;
+    border: solid var(--accent-one);
     border-width: 0.5rem 0.5rem 2rem 0.5rem;
 }
 
@@ -77,14 +77,14 @@
 }
 
 .monitor-neck {
-    background: $accent-one;
+    background: var(--accent-one);
     width: 3rem;
     height: 10rem;
 }
 
 .monitor-stand {
     transform: translateY(-0.5rem);
-    background: $accent-one;
+    background: var(--accent-one);
     width: 100%;
     height: 3rem;
     border-radius: 100%;
@@ -105,13 +105,13 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    color: $accent-three;
+    color: var(--accent-three);
     padding: 2rem 0 2rem 0;
-    border-bottom: 1px solid $accent-one;
+    border-bottom: 1px solid var(--accent-one);
     transition-duration: 0.25s;
     &:hover {
-        color: $accent-two;
-        border-bottom: 2px solid $accent-two;
+        color: var(--accent-two);
+        border-bottom: 2px solid var(--accent-two);
         transform: scale(105%);
         transition-duration: 0.25s;
     }
@@ -125,10 +125,10 @@
 
 .project-title {
     font-size: 1.25rem;
-    color: $accent-three;
+    color: var(--accent-three);
     width: 100%;
     &:hover {
-        color: $accent-two;
+        color: var(--accent-two);
         text-decoration: underline;
     }
 }
