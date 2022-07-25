@@ -1,22 +1,30 @@
 .landing {
     width: 100%;
-    height: calc(100vh - 5rem);
+    min-height: 100vh;
     display: flex;
     justify-content: space-between;
 }
 
 .landing-l, .landing-r {
-    width: fit-content;
-    height: 100%;
+    width: 20vw;
+    height: 100vh;
+    padding-top: 25vh;
     @include flex-center;
+}
+
+.landing-l {
+    transform: translateX(-5vw);
+}
+
+.landing-r {
+    transform: translateX(5vw);
 }
 
 .landing-c {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     @include flex-center;
     flex-direction: column;
-    transform: translateY(4rem);
 }
 
 .line-divider {
@@ -29,21 +37,18 @@
     animation: squiggle 5s infinite;
 }
 
-.tri-l, .tri-r  {
-    width: 0; 
-    height: 0;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent; 
+.star {
+    position: absolute;
+    height: 150%;
+    width: 100%;
+    background: url(../img/landing_star_dark.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-.tri-l {
-    transform: translateX(-1rem);
-    border-left: 150px solid var(--accent-one); 
-}
-
-.tri-r {
-    transform: translateX(1rem);
-    border-right: 150px solid var(--accent-one); 
+.star-l {
+    transform: rotateY(180deg);
 }
 
 .landing-heading {
@@ -79,6 +84,7 @@
     color: var(--bg);
     transition-duration: 0.25s;
     &:hover {
+        margin-top: -1rem;
         padding: 2rem;
         filter: brightness(110%);
         box-shadow: 0 0 1rem var(--accent-two);

@@ -16,6 +16,12 @@ body {
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
+    @include respond-to(medium) {
+        background: green;
+    }
+    @include respond-to(small) {
+        background: red;
+    }
 }
 
 nav {
@@ -38,13 +44,26 @@ a {
     font-family: $font-regular;
 }
 
+li {
+    @extend p;
+}
+
 h1 {
     font-family: $font-display;
     font-size: 3rem;
+}
+
+h2 {
+    @extend h1;
+    font-size: 1.5rem;
 }
 
 button {
     border: none;
     padding: 1.5rem;
     font-weight: 700;
+}
+
+img {
+    border: 0;
 }

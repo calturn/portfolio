@@ -15,3 +15,28 @@ $accent-three: #FAF8EB;
 // fonts
 $font-display: 'Montserrat Alternates', sans-serif;
 $font-regular: 'Montserrat', sans-serif;
+
+// Responsive design parameters
+$breakpoints: (
+    'small' : 31.25em,
+    'medium' : 62.25em,
+    'large' : 70em
+);
+
+// Breakpoint map
+@mixin respond-to($breakpoint) {
+    // Get value from key
+    $value: map-get($breakpoints, $breakpoint);
+    // if key exists in map
+    @if $value != null {
+        // Prints media query based on value
+        @media (max-width: $value) {
+            @content;
+        }
+    }
+    // If key does not exist, warn dev
+    @else {
+        @warn "Could not retrieve value from `#{$breakpoint}`."
+        + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}

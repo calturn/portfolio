@@ -3,7 +3,7 @@
     min-height: fit-content;
     justify-content: center;
     z-index: 100;
-    padding-bottom: 8rem;
+    padding: 8rem 0 8rem 0;
 }
 
 .contact-l {
@@ -24,6 +24,7 @@
     margin: 0.5rem;
     animation: none;
     &:hover{
+        margin-top: 0;
         transform: scale(110%) translateY(-0.25rem);
     }
 }
@@ -40,27 +41,39 @@
 }
 
 .page-bottom {
-    padding-top: 0;
-    margin-bottom: -16rem;
-    transform: translateY(-15rem);
-    background: url(../img/sssurf.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: calc(100% + 2rem);
-    height: 50rem;
+    width: 100vw;
+    height: 20rem;
     @include flex-center;
 }
 
+.star-btm-container {
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    transform: translateY(2rem);
+}
+
 .back-to-top {
-    transform: translateY(12rem);
-    color: var(--bg);
+    width: fit-content;
+    left:0;
+    right:0;
+    top: 50%;
+    margin-left:auto;
+    margin-right:auto;
+    position: absolute;
+    color: var(--accent-two);
     padding: 1rem;
     font-size: 1.5rem;
     border-bottom: 0 solid var(--accent-two);
     transition-duration: 0.25s;
+    z-index: 100;
     &:hover {
         border-bottom: 0.5rem solid var(--accent-two);
-        transform: translateY(12rem) scale(110%);
+        transform: translateY(-0.5rem) scale(110%);
         transition-duration: 0.25s;
     }
+}
+
+#starBtmLight {
+    display: none;
 }
