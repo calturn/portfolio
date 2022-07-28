@@ -24,16 +24,6 @@ body {
   align-items: center;
   overflow-x: hidden;
 }
-@media (max-width: 62.25em) {
-  body {
-    background: green;
-  }
-}
-@media (max-width: 31.25em) {
-  body {
-    background: red;
-  }
-}
 
 nav {
   display: flex;
@@ -145,6 +135,17 @@ nav {
   border-color: var(--accent-two);
   box-shadow: 0 0 0.5rem var(--accent-two);
   transition-duration: 0.25s;
+}
+
+.mode-switch-light:hover {
+  padding: 0.75rem 1rem 0.75rem 1rem;
+  border-color: var(--accent-three);
+  box-shadow: 0 0 0.5rem var(--accent-three);
+  transition-duration: 0.25s;
+}
+
+#modeSwitchSml {
+  display: none;
 }
 
 .eyecon {
@@ -332,7 +333,7 @@ nav {
 }
 
 .location-text {
-  padding: 2rem 0 6rem 0;
+  padding: 2rem 0 4rem 0;
   font-size: 1rem;
 }
 
@@ -355,9 +356,9 @@ nav {
 
 .section-divider {
   margin: 9rem 0 6rem 0;
-  height: 2px;
+  height: 6px;
   width: calc(100% - 8rem);
-  background: var(--accent-one);
+  background: transparent;
 }
 
 .page-indicators {
@@ -397,7 +398,7 @@ nav {
 .projects, .contact {
   height: fit-content;
   width: 100%;
-  padding: 20vh 4rem 20vh 4rem;
+  padding: 10vh 4rem 10vh 4rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -449,6 +450,7 @@ nav {
   width: 27.5rem;
   height: 17.5rem;
   border: solid var(--accent-one);
+  border-radius: 20px;
   border-width: 0.5rem 0.5rem 2rem 0.5rem;
 }
 
@@ -459,6 +461,7 @@ nav {
   object-position: 0 0;
   display: none;
   overflow: hidden;
+  z-index: -1;
 }
 
 .idle-img {
@@ -486,7 +489,7 @@ nav {
 
 .projects-text {
   line-height: 150%;
-  padding-bottom: 7rem;
+  padding-bottom: 2rem;
 }
 
 .projects-list {
@@ -647,7 +650,7 @@ nav {
   min-height: fit-content;
   justify-content: center;
   z-index: 100;
-  padding: 8rem 0 8rem 0;
+  padding: 15vh 0 10vh 0;
 }
 
 .contact-l {
@@ -722,4 +725,96 @@ nav {
 
 #starBtmLight {
   display: none;
+}
+
+@media (max-width: 31.25em) {
+  h1, h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 31.25em) {
+  .star {
+    display: none;
+  }
+}
+
+@media (max-width: 31.25em) {
+  .section-btn, .contact-option {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 31.25em) {
+  .location-text {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 62.25em) {
+  .eyecon {
+    margin-right: 0;
+  }
+}
+@media (max-width: 31.25em) {
+  .eyecon {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 62.25em) {
+  .mode-switch {
+    font-size: 0;
+    padding: 1rem 0.6rem 1rem 0.6rem;
+  }
+  .mode-switch:hover {
+    padding: 1rem 0.6rem 1rem 0.6rem;
+  }
+}
+@media (max-width: 31.25em) {
+  .mode-switch {
+    font-size: 0;
+    padding: 1rem 0.6rem 1rem 0.6rem;
+  }
+  .mode-switch:hover {
+    padding: 1rem 0.6rem 1rem 0.6rem;
+  }
+}
+
+@media (max-width: 62.25em) {
+  .section-divider {
+    width: calc(100% - 5rem);
+  }
+}
+
+@media (max-width: 62.25em) {
+  .projects, .contact {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (max-width: 62.25em) {
+  .projects-l {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 62.25em) {
+  .projects-r {
+    display: none;
+  }
+}
+
+@media (max-width: 31.25em) {
+  .project-title, .project-type, .project-number {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 62.25em) {
+  .contact-r {
+    padding-left: 0;
+  }
 }

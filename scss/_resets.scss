@@ -16,12 +16,6 @@ body {
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
-    @include respond-to(medium) {
-        background: green;
-    }
-    @include respond-to(small) {
-        background: red;
-    }
 }
 
 nav {

@@ -42,7 +42,7 @@ const darkColors = ["#000425", "#AFB7FF", "#FFC690", "#FAF8EB"];
 const lightColours = ["#FAF8EB", "#000425", "#7B88FF", "#FAF8EB"];
 
 // Light and dark mode button
-const modeBtn = document.getElementById("modeSwitch");
+let modeBtn = document.getElementById('modeSwitch');
 var root = document.querySelector(':root');
 function switchMode() {
     if (modeBtn.classList.contains("mode-switch-dark")) {
@@ -82,16 +82,18 @@ function scroller(){
     var elementTopContact = contact.getBoundingClientRect().top;
     var elementVisible = 400;
     if ((elementTop < windowHeight - elementVisible) && (elementTopContact > windowHeight - elementVisible)) {
-        console.log("we here");
-        document.getElementById("pg1").style.backgroundColor = "transparent";
+        // on pg 2
+        document.getElementById("pg1").classList.remove("active-pg");
         document.getElementById("pg2").classList.add("active-pg");
         document.getElementById("pg3").classList.remove("active-pg");
     } else if (elementTopContact < windowHeight - elementVisible) {
+        // on pg 3
         document.getElementById("pg1").classList.remove("active-pg");
         document.getElementById("pg2").classList.remove("active-pg");
         document.getElementById("pg3").classList.add("active-pg");
     } else {
-        document.getElementById("pg1").style.backgroundColor = "#FAF8EB";
+        // on pg 1
+        document.getElementById("pg1").classList.add("active-pg");
         document.getElementById("pg2").classList.remove("active-pg");
         document.getElementById("pg3").classList.remove("active-pg");
     }

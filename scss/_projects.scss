@@ -1,7 +1,7 @@
 .projects {
     height: fit-content;
     width: 100%;
-    padding: 20vh 4rem 20vh 4rem;
+    padding: 10vh 4rem 10vh 4rem;
     display: flex;
     flex-wrap: wrap;
 }
@@ -53,6 +53,7 @@
     width: 27.5rem;
     height: 17.5rem;
     border: solid var(--accent-one);
+    border-radius: 20px;
     border-width: 0.5rem 0.5rem 2rem 0.5rem;
 }
 
@@ -63,6 +64,7 @@
     object-position: 0 0;
     display: none;
     overflow: hidden;
+    z-index: -1;
 }
 
 .idle-img {
@@ -91,7 +93,7 @@
 
 .projects-text {
     line-height: 150%;
-    padding-bottom: 7rem;
+    padding-bottom: 2rem;
 }
 
 .projects-list{

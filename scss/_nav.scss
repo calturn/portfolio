@@ -41,6 +41,19 @@ nav {
     }
 }
 
+.mode-switch-light {
+    &:hover {
+        padding: 0.75rem 1rem 0.75rem 1rem;
+        border-color: var(--accent-three);
+        box-shadow: 0 0 0.5rem var(--accent-three);
+        transition-duration: 0.25s;
+    }
+}
+
+#modeSwitchSml {
+    display: none;
+}
+
 .eyecon {
     width: 2rem;
     height: 1rem;
