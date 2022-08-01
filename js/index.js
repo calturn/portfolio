@@ -38,37 +38,55 @@ window.onload = function resetStates() {
 }
 
 // Color values
+// "bg", "light-color", "interactive-color (btn inactive)", "highlight-color (btn active)"
 const darkColors = ["#000425", "#AFB7FF", "#FFC690", "#FAF8EB"];
-const lightColours = ["#FAF8EB", "#000425", "#7B88FF", "#FAF8EB"];
+const lightColours = ["#FAF8EB", "#7B88FF", "#FF3E32", "#000425"];
 
 // Light and dark mode button
-const modeBtn = document.getElementById("modeSwitch");
+let modeBtn = document.getElementById('modeSwitch');
 var root = document.querySelector(':root');
+const eyeconClosed = `
+    <svg width="100%" height="100%" viewBox="0 0 64 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2 2C2 2 17.3553 16.5 32 16.5C46.6447 16.5 62 2 62 2" stroke="currentColor" stroke-width="3"/>
+    <line x1="31.5" y1="16" x2="31.5" y2="24" stroke="currentColor" stroke-width="3"/>
+    <line x1="47.9458" y1="11.3242" x2="52.5164" y2="17.89" stroke="currentColor" stroke-width="3"/>
+    <line y1="-1.5" x2="8" y2="-1.5" transform="matrix(-0.571318 0.820729 0.820729 0.571318 17.5706 12)" stroke="currentColor" stroke-width="3"/>
+    </svg>
+`;
+const eyeconOpen = `
+    <svg width="100%" height="100%" viewBox="0 0 64 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2 17C2 17 17.3553 2 32 2C46.6447 2 62 17 62 17" stroke="currentColor" stroke-width="3"/>
+    <circle cx="31.4643" cy="18.6071" r="8.57143" fill="currentColor"/>
+    <circle cx="34" cy="15.6786" r="3" fill="currentColor"/>
+    </svg>
+`;
 function switchMode() {
     if (modeBtn.classList.contains("mode-switch-dark")) {
         // Light mode
         modeBtn.classList.remove("mode-switch-dark");
-        modeBtn.innerHTML = '<div class="eyecon eyecon-open"></div> Lights off';
+        modeBtn.innerHTML = `<div class="eyecon eyecon-open">${eyeconOpen}</div> Lights off`;
         document.getElementById("squiggle").style.backgroundImage = "url(../img/sssquiggly_light.svg)";
-        document.getElementById("topBtn").style.color = "var(--accent-one)";
         document.getElementById("starBtmLight").style.display = "flex";
         document.getElementById("starBtmDark").style.display = "none";
         root.style.setProperty('--bg', lightColours[0]);
         root.style.setProperty('--accent-one', lightColours[1]);
-        root.style.setProperty('--accent-two', lightColours[1]);
-        root.style.setProperty('--accent-three', lightColours[1]);
+        root.style.setProperty('--accent-two', lightColours[2]);
+        root.style.setProperty('--accent-three', lightColours[3]);
+        // document.querySelector(".star-r").style.color = 'var(--accent-one)';
+        // document.querySelector(".star-l").style.color = 'var(--accent-one)';
     } else {
         // Dark mode
         modeBtn.classList.add("mode-switch-dark");
-        modeBtn.innerHTML = '<div class="eyecon"></div> Lights on';
+        modeBtn.innerHTML = `<div class="eyecon">${eyeconClosed}</div> Lights on`;
         document.getElementById("squiggle").style.backgroundImage = "url(../img/sssquiggly.svg)";
-        document.getElementById("topBtn").style.color = "var(--accent-two)";
         document.getElementById("starBtmLight").style.display = "none";
         document.getElementById("starBtmDark").style.display = "flex";
         root.style.setProperty('--bg', darkColors[0]);
         root.style.setProperty('--accent-one', darkColors[1]);
         root.style.setProperty('--accent-two', darkColors[2]);
         root.style.setProperty('--accent-three', darkColors[3]);
+        // document.querySelector(".star-r").style.color = 'var(--accent-one)';
+        // document.querySelector(".star-l").style.color = 'var(--accent-one)';
     }
 }
 modeBtn.addEventListener("click", switchMode);
@@ -82,16 +100,18 @@ function scroller(){
     var elementTopContact = contact.getBoundingClientRect().top;
     var elementVisible = 400;
     if ((elementTop < windowHeight - elementVisible) && (elementTopContact > windowHeight - elementVisible)) {
-        console.log("we here");
-        document.getElementById("pg1").style.backgroundColor = "transparent";
+        // on pg 2
+        document.getElementById("pg1").classList.remove("active-pg");
         document.getElementById("pg2").classList.add("active-pg");
         document.getElementById("pg3").classList.remove("active-pg");
     } else if (elementTopContact < windowHeight - elementVisible) {
+        // on pg 3
         document.getElementById("pg1").classList.remove("active-pg");
         document.getElementById("pg2").classList.remove("active-pg");
         document.getElementById("pg3").classList.add("active-pg");
     } else {
-        document.getElementById("pg1").style.backgroundColor = "#FAF8EB";
+        // on pg 1
+        document.getElementById("pg1").classList.add("active-pg");
         document.getElementById("pg2").classList.remove("active-pg");
         document.getElementById("pg3").classList.remove("active-pg");
     }
@@ -174,9 +194,9 @@ closeModal.addEventListener("click", function() {
     pageBody.style.overflowY = "scroll";
 });
 
-const preloved = document.getElementById("preloved");
-const meanwhile = document.getElementById("meanwhile");
-const kiwiStay = document.getElementById("kiwistay");
+const preloved = document.getElementById("prelovedBtn");
+const meanwhile = document.getElementById("meanwhileBtn");
+const kiwiStay = document.getElementById("kiwistayBtn");
 
 function fillModalContent(projects, name) {
     

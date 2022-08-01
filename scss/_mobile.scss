@@ -1,0 +1,120 @@
+h1 {
+    @include respond-to (small) {
+        font-size: 2.25rem;
+    }
+}
+
+.star {
+    @include respond-to (small) {
+        display: none;
+    }
+}
+
+.section-btn {
+    @include respond-to (small) {
+        font-size: 0.875rem;
+    }
+}
+
+.location-text {
+    @include respond-to (small) {
+        font-size: 0.7rem;
+    }
+}
+
+.eyecon {
+    @include respond-to (medium) {
+        margin-right: 0;
+    }
+    @include respond-to (small) {
+        margin-right: 0;
+    }
+}
+
+.mode-switch {
+    @include respond-to (medium) {
+        font-size: 0;
+        padding: 1rem 0.6rem 1rem 0.6rem;
+        &:hover {
+            padding: 1rem 0.6rem 1rem 0.6rem;
+        }
+    }
+    @include respond-to (small) {
+        font-size: 0;
+        padding: 1rem 0.6rem 1rem 0.6rem;
+        &:hover {
+            padding: 1rem 0.6rem 1rem 0.6rem;
+        }
+    }
+}
+
+.section-divider {
+    @include respond-to (medium) {
+        width: calc(100% - 5rem);
+    }
+}
+
+// Projects page
+
+.projects {
+    @include respond-to (medium) {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+
+.projects-l {
+    @include respond-to (medium) {
+        width: 100%;
+        padding-right: 0;
+    }
+}
+
+.projects-r {
+    @include respond-to (medium) {
+        display: none;
+    }
+}
+
+.project-title, .project-type, .project-number {
+    @include respond-to (small) {
+        font-size: 0.875rem;
+    }
+}
+
+.projects-modal {
+    @include respond-to (medium) {
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: var(--accent-two) var(--bg);
+    }
+}
+
+.projects-modal-body {
+    @include respond-to (medium) {
+        flex-direction: column;
+        height: fit-content;
+    }
+}
+
+.projects-modal-l {
+    @include respond-to (medium) {
+        width: 100%;
+        overflow-y: hidden;
+    }
+}
+
+.projects-modal-r {
+    @include respond-to (medium) {
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+// Contact page
+
+.contact-r {
+    @include respond-to (medium) {
+        padding-left: 0;
+    }
+}

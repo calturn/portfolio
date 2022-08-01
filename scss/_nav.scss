@@ -27,30 +27,38 @@ nav {
     display: flex;
     border-radius: 2rem;
     padding: 0.75rem 1rem 0.75rem 1rem;
-    background: var(--accent-three);
-    color: var(--bg);
-    border: 0.2rem solid var(--bg);
+    background: var(--bg);
+    color: var(--accent-two);
+    border: 0.15rem solid var(--accent-two);
     cursor: pointer;
     z-index: 1000;
     transition-duration: 0.25s;
     &:hover {
+        color: var(--accent-three);
         padding: 0.75rem 1rem 0.75rem 1rem;
-        border-color: var(--accent-two);
-        box-shadow: 0 0 0.5rem var(--accent-two);
+        border-color: var(--accent-three);
+        box-shadow: 0 0 0.5rem var(--accent-three);
         transition-duration: 0.25s;
     }
+}
+
+.mode-switch-light {
+    &:hover {
+        padding: 0.75rem 1rem 0.75rem 1rem;
+        border-color: var(--accent-three);
+        box-shadow: 0 0 0.5rem var(--accent-three);
+        transition-duration: 0.25s;
+    }
+}
+
+#modeSwitchSml {
+    display: none;
 }
 
 .eyecon {
     width: 2rem;
     height: 1rem;
     margin-right: 1rem;
-    background-image: url(../img/eyecon_closed.svg);
-    background-size: cover;
-    background-position: center;
-    &-open {
-        background-image: url(../img/eyecon_open.svg);
-    }
 }
 
 .fa-power-off {
@@ -141,4 +149,8 @@ nav {
     -ms-transition: all 0.25s linear;
     -o-transition: all 0.25s linear;
     transition: all 0.25s linear;
+}
+
+.currentColor {
+    stroke: inherit;
 }
