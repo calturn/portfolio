@@ -8,7 +8,7 @@
 .landing-l, .landing-r {
     width: 20vw;
     height: 100vh;
-    padding-top: 25vh;
+    padding-top: 10vh;
     @include flex-center;
 }
 
@@ -41,10 +41,7 @@
     position: absolute;
     height: 150%;
     width: 100%;
-    background: url(../img/landing_star_dark.svg);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    color: var(--accent-one);
 }
 
 .star-l {
@@ -55,6 +52,7 @@
     @include flex-center;
     max-width: 17ch;
     text-align: center;
+    color: var(--accent-three);
 }
 
 .landing-p {
@@ -84,6 +82,7 @@
     color: var(--bg);
     transition-duration: 0.25s;
     &:hover {
+        background: var(--accent-two);
         margin-top: -1rem;
         padding: 2rem;
         filter: brightness(110%);

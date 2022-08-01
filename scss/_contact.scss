@@ -29,13 +29,6 @@
     }
 }
 
-#linkedInBtn, #gitHubBtn {
-    background: var(--accent-one);
-    &:hover{
-        box-shadow: 0 0 1rem var(--accent-one);
-    }
-}
-
 .no-border {
     border: none;
 }
@@ -64,11 +57,12 @@
     color: var(--accent-two);
     padding: 1rem;
     font-size: 1.5rem;
-    border-bottom: 0 solid var(--accent-two);
+    border-bottom: 0.1rem solid var(--accent-two);
     transition-duration: 0.25s;
     z-index: 100;
     &:hover {
-        border-bottom: 0.5rem solid var(--accent-two);
+        color: var(--accent-three);
+        border-bottom: 0.5rem solid var(--accent-three);
         transform: translateY(-0.5rem) scale(110%);
         transition-duration: 0.25s;
     }
