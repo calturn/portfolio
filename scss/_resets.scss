@@ -53,9 +53,22 @@ h2 {
 }
 
 button {
+    font-size: 0.875rem;
+    font-family: $font-regular;
+    background: inherit;
     border: none;
-    padding: 1.5rem;
+    padding: 2rem;
     font-weight: 700;
+    cursor: pointer;
+    &:focus {
+        border-color: transparent;
+        outline: 3px solid var(--accent-one);
+    }
+    &:active {
+        border-color: transparent;
+        outline: 0;
+        color: var(--accent-one);
+    }
 }
 
 img {

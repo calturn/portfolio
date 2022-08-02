@@ -55,9 +55,22 @@ h2 {
 }
 
 button {
+  font-size: 0.875rem;
+  font-family: "Montserrat", sans-serif;
+  background: inherit;
   border: none;
-  padding: 1.5rem;
+  padding: 2rem;
   font-weight: 700;
+  cursor: pointer;
+}
+button:focus {
+  border-color: transparent;
+  outline: 3px solid var(--accent-one);
+}
+button:active {
+  border-color: transparent;
+  outline: 0;
+  color: var(--accent-one);
 }
 
 img {
@@ -131,6 +144,7 @@ nav {
   transition-duration: 0.25s;
 }
 .mode-switch:hover {
+  outline: 0;
   color: var(--accent-three);
   padding: 0.75rem 1rem 0.75rem 1rem;
   border-color: var(--accent-three);
@@ -338,14 +352,14 @@ nav {
   background: var(--accent-two);
   border-radius: 10rem 5rem 10rem 5rem;
   animation: float 5s infinite ease-in-out;
-  padding: 1.5rem;
+  padding: 2rem;
   color: var(--bg);
   transition-duration: 0.25s;
 }
 .section-btn:hover, .contact-option:hover {
   background: var(--accent-two);
   margin-top: -1rem;
-  padding: 2rem;
+  padding: 2.5rem;
   filter: brightness(110%);
   box-shadow: 0 0 1rem var(--accent-two);
   cursor: pointer;
@@ -488,6 +502,7 @@ nav {
 .projects-text {
   line-height: 150%;
   padding-bottom: 2rem;
+  color: var(--accent-three);
 }
 
 .projects-list {
@@ -524,7 +539,12 @@ nav {
 }
 
 .project-title {
+  padding: 1.5rem;
+  margin-right: 1rem;
+  display: flex;
+  justify-content: flex-start;
   font-size: 1.25rem;
+  text-align: left;
   color: var(--accent-two);
   width: 100%;
   transition-duration: 0.25s;
@@ -700,7 +720,8 @@ nav {
 }
 .contact-option:hover {
   margin-top: 0;
-  transform: scale(110%) translateY(-0.25rem);
+  transform: scale(105%) translateY(-0.25rem);
+  margin: 0;
 }
 
 .no-border {
@@ -732,7 +753,7 @@ nav {
   position: absolute;
   color: var(--accent-two);
   padding: 1rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   border-bottom: 0.1rem solid var(--accent-two);
   transition-duration: 0.25s;
   z-index: 100;

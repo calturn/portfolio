@@ -78,13 +78,13 @@
     background: var(--accent-two);
     border-radius: 10rem 5rem 10rem 5rem;
     animation: float 5s infinite ease-in-out;
-    padding: 1.5rem;
+    padding: 2rem;
     color: var(--bg);
     transition-duration: 0.25s;
     &:hover {
         background: var(--accent-two);
         margin-top: -1rem;
-        padding: 2rem;
+        padding: 2.5rem;
         filter: brightness(110%);
         box-shadow: 0 0 1rem var(--accent-two);
         cursor: pointer;
