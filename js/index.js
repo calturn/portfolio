@@ -65,7 +65,7 @@ function switchMode() {
         // Light mode
         modeBtn.classList.remove("mode-switch-dark");
         modeBtn.innerHTML = `<div class="eyecon eyecon-open">${eyeconOpen}</div> Lights off`;
-        document.getElementById("squiggle").style.backgroundImage = "url(../img/sssquiggly_light.svg)";
+        document.getElementById("squiggle").style.backgroundImage = "url(./img/sssquiggly_light.svg)";
         document.getElementById("starBtmLight").style.display = "flex";
         document.getElementById("starBtmDark").style.display = "none";
         root.style.setProperty('--bg', lightColours[0]);
@@ -78,7 +78,7 @@ function switchMode() {
         // Dark mode
         modeBtn.classList.add("mode-switch-dark");
         modeBtn.innerHTML = `<div class="eyecon">${eyeconClosed}</div> Lights on`;
-        document.getElementById("squiggle").style.backgroundImage = "url(../img/sssquiggly.svg)";
+        document.getElementById("squiggle").style.backgroundImage = "url(./img/sssquiggly.svg)";
         document.getElementById("starBtmLight").style.display = "none";
         document.getElementById("starBtmDark").style.display = "flex";
         root.style.setProperty('--bg', darkColors[0]);
