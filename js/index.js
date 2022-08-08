@@ -8,7 +8,7 @@ const projects = [
         Tourism NZ's "100% Pure New Zealand" campaign brand guidelines informed the app's visual design.`,
         "tools" : ["HTML5", "CSS", "JavaScript", "SASS", "Google Maps API", "Figma"],
         "link" : "https://github.com/calturn/KiwiStay",
-        "img" : "../img/Kiwistay_modal.jpg"
+        "img" : "./img/Kiwistay_modal.jpg"
     },
     {
         "title" : "preloved",
@@ -18,7 +18,7 @@ const projects = [
         My specific role in this project was spread evenly across the UX Research, UI Design, and development across the full stack.`,
         "tools" : ["HTML5", "CSS", "JavaScript", "SASS", "Node.js", "MongoDB", "Mongoose", "Gulp", "Figma"],
         "link" : "https://github.com/calturn/preloved",
-        "img" : "../img/preloved_modal.png"
+        "img" : "./img/preloved_modal.png"
     },
     {
         "title" : "MEANWHILE Gallery",
@@ -28,7 +28,7 @@ const projects = [
         Development of this custom theme included the creation of custom post types, metaboxes, taxonomies, and appearance panel functions using PHP.`,
         "tools" : ["HTML5", "CSS", "JavaScript", "PHP", "WordPress", "Figma"],
         "link" : "https://callum.turner.yoobeestudent.net/meanwhile/",
-        "img" : "../img/meanwhile_modal.jpg"
+        "img" : "./img/meanwhile_modal.jpg"
     }
 ];
 
