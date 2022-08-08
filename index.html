@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <title>Calum Turner</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
         <div class="nav-l">
             <button id="modeSwitch" class="mode-switch mode-switch-dark">
                 <div class="eyecon">
-                    <svg width="100%" height="100%" viewBox="0 0 64 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="100%" height="120%" viewBox="0 0 64 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 2C2 2 17.3553 16.5 32 16.5C46.6447 16.5 62 2 62 2" stroke="currentColor" stroke-width="3"/>
                         <line x1="31.5" y1="16" x2="31.5" y2="24" stroke="currentColor" stroke-width="3"/>
                         <line x1="47.9458" y1="11.3242" x2="52.5164" y2="17.89" stroke="currentColor" stroke-width="3"/>
@@ -37,13 +37,13 @@
                 <div class="menu-line menu-line-2"></div>
             </button> -->
         </div>
-        <div class="menu-container fade" id="menu">
+        <!-- <div class="menu-container fade" id="menu">
             <ul class="menu">
                 <li class="menu-item"><a href="#" class="menu-link">About</a></li>
                 <li class="menu-item"><a href="#" class="menu-link">Github</a></li>
                 <li class="menu-item"><a href="#" class="menu-link">LinkedIn</a></li>
             </ul>
-        </div>
+        </div> -->
     </nav>
 
     <div id="landing" class="landing">
@@ -55,11 +55,11 @@
             </div>
         </div>
         <div class="landing-c">
-            <p class="landing-p">Kia ora! I'm a</p>
-            <h1 class="landing-heading">Front-end Developer & Web Designer</h1>
+            <p class="landing-p">👋🏻 Kia ora! I'm a</p>
+            <h1 class="landing-heading">UX Designer & Web Developer</h1>
             <div id="squiggle" class="line-divider"></div>
-            <p class="location-text"><img class="location-pin" src="./img/location_pin.svg"> Based in Wellington, New Zealand</p>
-            <a href="#projects" class="section-btn">View projects</a>
+            <p class="location-text"><img alt="map marker icon" class="location-pin" src="./img/location_pin.svg"> Based in Wellington, New Zealand</p>
+            <a href="#projects"><button class="section-btn" role="button">View projects</button></a>
         </div>
         <div class="landing-r">
             <div class="star star-r">
@@ -80,29 +80,29 @@
     <div id="projects" class="projects">
 
         <div class="projects-l">
-            <h1 class="section-title">Projects</h1>
+            <h1 class="section-title">📐 Projects</h1>
             <p class="projects-text">I recently graduated with diploma in web and UX design – the following are a few selected projects from my studies.</p>
             <div class="projects-list">
                 <div id="preloved" class="project-item">
                     <p class="project-number">01.</p>
-                    <a id="prelovedBtn" class="project-title">preloved</a>
+                        <button id="prelovedBtn" class="project-title">preloved</button>
                     <p class="project-type">Web App</p>
                 </div>
                 <div id="meanwhile" class="project-item">
                     <p class="project-number">02.</p>
-                    <a id="meanwhileBtn" class="project-title">MEANWHILE Gallery</a>
+                        <button id="meanwhileBtn" class="project-title">MEANWHILE Gallery</button>
                     <p class="project-type">Wordpress Theme</p>
                 </div>
                 <div id="kiwistay" class="project-item">
                     <p class="project-number">03.</p>
-                    <a id="kiwistayBtn" class="project-title">KiwiStay</a>
+                        <button id="kiwistayBtn" class="project-title">KiwiStay</button>
                     <p class="project-type">Web App</p>
                 </div>
             </div>
             <div id="projectsModal" class="projects-modal-bg">
-                <div class="projects-modal">
+                <div class="projects-modal" tabindex="0">
                     <div class="projects-modal-top">
-                        <div id="closeModal" class="close-modal"><i class="fa-solid fa-xmark"></i></div>
+                        <button id="closeModal" class="close-modal"><i class="fa-solid fa-xmark"></i></button>
                     </div>
                     <div id="modalBody" class="projects-modal-body">
                         <!-- content -->
@@ -116,9 +116,9 @@
             <div class="monitor-container">
                 <div class="monitor-preview">
                     <div id="idleImg" class="idle-img"></div>
-                    <img src="./img/preloved.png" alt="preloved mockup" class="monitor-image" id="prelovedImg">
-                    <img src="./img/meanwhile.png" alt="MEANWHILE mockup" class="monitor-image" id="meanwhileImg">
-                    <img src="./img/Kiwistay.jpg" alt="KiwiStay Mmckup" class="monitor-image" id="kiwistayImg">
+                    <img src="./img/preloved_screen.jpg" alt="preloved web app mockup" class="monitor-image" id="prelovedImg">
+                    <img src="./img/meanwhile.png" alt="MEANWHILE wordpress theme mockup" class="monitor-image" id="meanwhileImg">
+                    <img src="./img/Kiwistay_screen.jpg" alt="KiwiStay web app mockup" class="monitor-image" id="kiwistayImg">
                 </div>
                 <div class="monitor-stand-container">
                     <div class="monitor-neck"></div>
@@ -133,12 +133,12 @@
 
     <div class="contact" id="contact">
         <div class="contact-l">
-            <h1 class="section-title no-border">Let's get in touch!</h1>
+            <h1 id="contactHeading" class="section-title no-border">💫 Let's get in touch!</h1>
         </div>
         <div class="contact-r">
-            <a href="mailto:calum-turner-creative@gmail.com" target="_blank" id="emailBtn" class="contact-option">Email</a>
-            <a href="https://www.linkedin.com/in/calum-turner-creative/" target="_blank" id="linkedInBtn" class="contact-option">LinkedIn</a>
-            <a href="https://github.com/calturn" target="_blank" id="gitHubBtn" class="contact-option">GitHub</a>
+            <a href="mailto:calum-turner-creative@gmail.com" target="_blank" id="emailBtn"><button class="contact-option">Email <i class="fa-solid fa-paper-plane"></i></button></a>
+            <a href="https://www.linkedin.com/in/calum-turner-creative/" target="_blank" id="linkedInBtn"><button class="contact-option">LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+            <a href="https://github.com/calturn" target="_blank" id="gitHubBtn"><button class="contact-option">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
         </div>
     </div>
 
@@ -150,7 +150,7 @@
             <svg id="starBtmLight" class="star-btm" width="100%" height="100%" viewBox="0 0 1500 300" preserveAspectRatio="xMidYMax slice" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M868.208 34.165L868.292 34.1903L868.38 34.1852L989.488 27.2314L1081.79 84.2603L1081.88 84.3112L1081.97 84.3276L1200.1 104.738L1263.46 179.547L1263.54 179.635L1263.64 179.681L1367.21 225.437L1395.45 310.672L1395.49 310.806L1395.6 310.897L1474.47 377.487L1464.86 464.803L1464.84 464.965L1464.92 465.107L1511.42 546L1464.92 626.893L1464.84 627.035L1464.86 627.197L1474.47 714.513L1395.6 781.103L1395.49 781.194L1395.45 781.328L1367.21 866.563L1263.64 912.319L1263.54 912.365L1263.46 912.453L1200.1 987.262L1081.97 1007.67L1081.88 1007.69L1081.79 1007.74L989.488 1064.77L868.38 1057.81L868.292 1057.81L868.208 1057.84L756 1091.48L643.792 1057.84L643.708 1057.81L643.62 1057.81L522.512 1064.77L430.207 1007.74L430.125 1007.69L430.029 1007.67L311.898 987.262L248.537 912.453L248.463 912.365L248.358 912.319L144.788 866.563L116.554 781.328L116.509 781.194L116.402 781.103L37.5274 714.513L47.1393 627.197L47.1571 627.035L47.0758 626.893L0.576736 546L47.0758 465.107L47.1571 464.965L47.1393 464.803L37.5274 377.487L116.402 310.897L116.509 310.806L116.554 310.672L144.788 225.437L248.358 179.681L248.463 179.635L248.537 179.547L311.898 104.739L430.029 84.3276L430.125 84.3112L430.207 84.2603L522.512 27.2314L643.62 34.1852L643.708 34.1903L643.792 34.165L756 0.521996L868.208 34.165Z" stroke="#000850"/>
             </svg>
-            <a id="topBtn" href="#page" class="back-to-top">Back to top</a>
+            <a id="topBtn" href="#page"><button class="back-to-top">Back to top</button></a>
         </div>
     </div>
 

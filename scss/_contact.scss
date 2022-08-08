@@ -25,7 +25,8 @@
     animation: none;
     &:hover{
         margin-top: 0;
-        transform: scale(110%) translateY(-0.25rem);
+        transform: scale(105%) translateY(-0.25rem);
+        margin: 0;
     }
 }
 
@@ -56,7 +57,7 @@
     position: absolute;
     color: var(--accent-two);
     padding: 1rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     border-bottom: 0.1rem solid var(--accent-two);
     transition-duration: 0.25s;
     z-index: 100;

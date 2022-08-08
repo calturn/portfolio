@@ -34,6 +34,7 @@ nav {
     z-index: 1000;
     transition-duration: 0.25s;
     &:hover {
+        outline: 0;
         color: var(--accent-three);
         padding: 0.75rem 1rem 0.75rem 1rem;
         border-color: var(--accent-three);
