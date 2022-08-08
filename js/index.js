@@ -8,7 +8,7 @@ const projects = [
         Tourism NZ's "100% Pure New Zealand" campaign brand guidelines informed the app's visual design.`,
         "tools" : ["HTML5", "CSS", "JavaScript", "SASS", "Google Maps API", "Figma"],
         "link" : "https://github.com/calturn/KiwiStay",
-        "img" : "../img/Kiwistay_Portrait.jpg"
+        "img" : "../img/Kiwistay_modal.jpg"
     },
     {
         "title" : "preloved",
@@ -18,7 +18,7 @@ const projects = [
         My specific role in this project was spread evenly across the UX Research, UI Design, and development across the full stack.`,
         "tools" : ["HTML5", "CSS", "JavaScript", "SASS", "Node.js", "MongoDB", "Mongoose", "Gulp", "Figma"],
         "link" : "https://github.com/calturn/preloved",
-        "img" : "../img/preloved_portrait.png"
+        "img" : "../img/preloved_modal.png"
     },
     {
         "title" : "MEANWHILE Gallery",
@@ -28,7 +28,7 @@ const projects = [
         Development of this custom theme included the creation of custom post types, metaboxes, taxonomies, and appearance panel functions using PHP.`,
         "tools" : ["HTML5", "CSS", "JavaScript", "PHP", "WordPress", "Figma"],
         "link" : "https://callum.turner.yoobeestudent.net/meanwhile/",
-        "img" : "../img/meanwhile.png"
+        "img" : "../img/meanwhile_modal.jpg"
     }
 ];
 
@@ -46,7 +46,7 @@ const lightColours = ["#FAF8EB", "#7B88FF", "#FF3E32", "#000425"];
 let modeBtn = document.getElementById('modeSwitch');
 var root = document.querySelector(':root');
 const eyeconClosed = `
-    <svg width="100%" height="100%" viewBox="0 0 64 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="100%" height="120%" viewBox="0 0 64 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M2 2C2 2 17.3553 16.5 32 16.5C46.6447 16.5 62 2 62 2" stroke="currentColor" stroke-width="3"/>
     <line x1="31.5" y1="16" x2="31.5" y2="24" stroke="currentColor" stroke-width="3"/>
     <line x1="47.9458" y1="11.3242" x2="52.5164" y2="17.89" stroke="currentColor" stroke-width="3"/>
@@ -223,9 +223,9 @@ function fillModalContent(projects, name) {
             <h1 class="modal-title">${title}</h1>
             <h2 class="modal-subtitle">${subtitle}</h2>
             <p class="modal-description">${description}</p>
-            <p class="modal-tools-p">Tools used:</p>
+            <p class="modal-tools-p">🛠 Tools used:</p>
             <ul id="tools" class="modal-tools"></ul>
-            <a target="_blank" href="${link}" class="modal-link">View on Github</a>
+            <a target="_blank" href="${link}" class="modal-link">View on Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="projects-modal-r">
                 <img class="projects-modal-img" src="${img}"></img>
