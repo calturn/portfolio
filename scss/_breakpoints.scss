@@ -25,7 +25,7 @@ h1 {
 
 .location-text {
     @include respond-to (small) {
-        font-size: 0.7rem;
+        text-align: center;
     }
 }
 

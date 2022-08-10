@@ -50,7 +50,7 @@
 
 .landing-heading {
     @include flex-center;
-    max-width: 15ch;
+    max-width: 11ch;
     text-align: center;
     color: var(--accent-three);
 }
@@ -70,8 +70,16 @@
 }
 
 .location-text {
-    padding: 2rem 0 4rem 0;
+    padding: 2rem 0 3rem 0;
     font-size: 1rem;
+}
+
+.location-link {
+    font-weight: 500;
+    color: inherit;
+    &:hover {
+        color: var(--accent-two);
+    }
 }
 
 .section-btn {

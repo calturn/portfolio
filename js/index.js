@@ -194,9 +194,9 @@ closeModal.addEventListener("click", function() {
     pageBody.style.overflowY = "scroll";
 });
 
-const preloved = document.getElementById("prelovedBtn");
-const meanwhile = document.getElementById("meanwhileBtn");
-const kiwiStay = document.getElementById("kiwistayBtn");
+const preloved = document.getElementById("preloved");
+const meanwhile = document.getElementById("meanwhile");
+const kiwiStay = document.getElementById("kiwistay");
 
 function fillModalContent(projects, name) {
     
