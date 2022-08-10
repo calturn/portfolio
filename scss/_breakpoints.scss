@@ -129,6 +129,12 @@ h1 {
     }
 }
 
+.modal-subtitle {
+    @include respond-to (small) {
+        font-size: 1.5rem;
+    }
+}
+
 // Contact page
 
 .contact {

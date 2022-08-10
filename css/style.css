@@ -914,6 +914,12 @@ nav {
 }
 
 @media (max-width: 31.25em) {
+  .modal-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 31.25em) {
   .contact {
     padding: 1rem;
   }
